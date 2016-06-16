@@ -1,0 +1,7 @@
+# calc_messages.yml
+
+welcome: "Welcome to Calculator! Enter your name:"
+valid_name: "Make sure to enter a valid name."
+first_num: "What's the first number?"
+sec_num: "What's the second number?"
+invalid_num: "Hmm...that doesn't look like a valid number."

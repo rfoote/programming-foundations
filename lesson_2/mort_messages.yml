@@ -1,0 +1,11 @@
+# mort_messages.yml
+
+welcome: "Welcome to the Mortgage Calculator! Enter your name:"
+valid_name: "That's not a valid name; try again."
+loan_amt: "Enter the loan amount as a whole number:"
+apr: "Enter the Annual Percentage Rate as a percentage (enter 5% as 5):"
+loan_duration: "Enter the loan duration in years:"
+invalid_num: "That's not a valid number; try again."
+payment: "Your monthly payment will be "
+continue: "Do you want to do another calculation? (Enter Y if so.)"
+goodbye: "Thank you for using the Mortgage Calculator! Goodbye."
