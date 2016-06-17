@@ -1,0 +1,96 @@
+# Question 1 - What would you expect the code below to print out?
+
+1
+2
+2
+3
+
+
+# Question 2 - Describe the difference between ! and ? in Ruby. 
+
+The ! at the end of a method name is sometimes an indicator that the method mutates its caller.
+For example, if in #1, the code had been numbers.uniq!, then the numbers array would have been modified.
+! can also mean "not", as in 'if n != 5'
+
+The ? at the end of a method name is sometimes an indicator that the method will return a boolean value.
+For example, methods like Hash.key? or Array.include? return true or false based on whether the hash contains the given key, or the array includes the given element.
+It's also used in the ternary operator (? : as in x == 1 ? puts 'yes' : puts 'no')
+
+# Explain what would happen in the following scenarios:
+
+1. what is != and where should you use it?
+!= means 'not equal to', and should be used in conditionals
+
+2. put ! before something, like !user_name
+If user_name has been defined, then putting ! before it returns "false", because ! is a negation. 
+Since the boolean value of user_name is true in the sense that it exists, putting ! in front makes it false.
+
+3. put ! after something like words.uniq!
+In this case, the ! causes the words array itself to be changed by the uniq method.
+
+4. put ? before something
+Putting ? before things (variable names, methods) gives a syntax error.
+
+5. put ? after something
+If you put ? after methods that contain the ? at the end of the name, then it's part of calling the method.
+If you put it in other locations, it gives a syntax error (except if used in the ternary operator ? :).
+
+6. put !! before something, like !!user_name
+This is a double negation. So if user_name is defined, then putting one ! makes it false. Putting two makes it true.
+
+
+# Question 3 - Replace the word "important" with "urgent" in this string:
+advice = "Few things in life are as important as house training your pet dinosaur."
+
+advice.gsub!("important", "urgent")
+
+
+# Question 4 - The Ruby Array class has several methods for removing items from the array.
+Two of them have very similar names. Let's see how they differ.
+
+What do the following method calls do?
+
+numbers.delete_at(1)
+In this case, the element at index 1 is deleted and returned.
+
+numbers.delete(1)
+This method deletes the element given in parentheses (and returns the deleted element).
+
+
+# Question 5 - Programmatically determine if 42 lies between 10 and 100.
+
+(10..100).include?(42)
+
+
+# Question 6 - Starting with the string, show two different ways to put the expected "Four score and " in front of it.
+
+famous_words = "seven years ago..."
+famous_words.prepend("Four score and ")
+
+OR
+
+famous_words.insert(0, "Four score and ")
+
+
+# Question 7 - If we take advantage of Ruby's Kernel#eval method to have it execute this string as if it were a "recursive" method call, what will be the result?
+
+The result is 42.
+
+
+# Question 8 - If we build an array like this, we will end up with this "nested" array. Make this into an un-nested array.
+
+flintstones.flatten!
+
+
+# Question 9 - Given the hash below, turn this into an array containing only two elements: Barney's name and Barney's numbers
+
+flintstones.assoc("Barney")
+
+
+# Question 10 - Given the array below, turn this array into a hash where the names are the keys and the values are the positions in the array.
+
+flintstones_hash = flintstones.each_with_index.to_h
+
+
+
+
